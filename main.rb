@@ -1,16 +1,20 @@
 output_length = 1000
-file = ARGV[0]
-puts file
+
 #Parse file and store words in dict
 dict = {}
 word_list = []
-File.open(file, 'r') do |f1|  
-  while line = f1.gets  
-    words = line.split
-    (words).each do |i|
-      word_list.push(i)
-    end
-  end  
+
+#for each of the files, add their words to the word list
+(0...ARGV.length). each do |num|
+  file = ARGV[num]
+  File.open(file, 'r') do |f1|  
+    while line = f1.gets  
+      words = line.split
+      (words).each do |i|
+        word_list.push(i)
+      end
+    end  
+  end
 end
 
 (0...word_list.length).each do |i|
