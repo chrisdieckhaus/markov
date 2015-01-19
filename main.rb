@@ -6,7 +6,7 @@ word_list = []
 
 #for each of the files, add their words to the word list
 (0...ARGV.length). each do |num|
-  file = ARGV[num]
+  file = "source_files/#{ARGV[num]}"
   File.open(file, 'r') do |f1|  
     while line = f1.gets  
       words = line.split
