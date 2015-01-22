@@ -1,6 +1,6 @@
 # markov
 
-A simple Ruby Markov text generator.
+A simple Ruby Markov-text-generator.
 
 To run:
 ```
